@@ -1,5 +1,5 @@
 //
-//  AuthRepository.swift
+//  CompanyService.swift
 //  Circle
 //
 //  Created by Leonardo Augusto Piovezan on 01/03/18.
@@ -9,8 +9,10 @@
 import Moya
 import RxSwift
 
-protocol AuthRepository {
+
+protocol CompanyService {
     
-    func authenticate(user:String, password:String)->Single<Response>
+    func getCompanyWith(token:String)->Single<Response>
     
+
 }

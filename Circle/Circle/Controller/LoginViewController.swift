@@ -15,9 +15,6 @@ import Alamofire
 class LoginViewController: UIViewController {
 
     //MARK: OUTLETS
-    
-    
-    
     @IBOutlet weak var logoLabel: UILabel!
     
     @IBOutlet weak var userTextField: UITextField!
@@ -27,13 +24,13 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var confirmButton: UIButton!
     
-
+    let disposableBag = DisposeBag()
+    
+    
+    //MARK: VIEW CONTROLLER METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
-
         bind()
-        // Do any additional setup after loading the view.
-    
     }
 
     
@@ -42,20 +39,50 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //MARK: CUSTOM METHODS
     func bind(){
         
-         let authService = AuthService()
-        let response = authService.authenticate(user: self.userTextField.text!, password: self.passwordTextField.text!)
-       
         confirmButton.rx.tap.bind{
-  
-            authService.authenticate(user: self.userTextField.text!, password: self.passwordTextField.text!, completion: { (data) in
-                
-                print(data)
-                print("narutinho deu boa <3")
-            })
-        }
+            let provider = MoyaProvider<AuthRouter>(plugins: [NetworkLoggerPlugin()])
+
+            let authService = AuthServiceImpl(provider: provider)
+
+            let response = authService.authenticate(user: self.userTextField.text!, password: self.passwordTextField.text!)
+            response.mapJSON()
+                .subscribe(onSuccess: { (response) in
+                print(response)
+                }, onError: { (error) in
+                    print(error)
+                }).disposed(by: self.disposableBag)
+
+//            authService.authenticate(user: self.userTextField.text!, password: self.passwordTextField.text!, completion: { (data) in
+//                
+//                print(data)
+// 
+//            })
+//            self.callPingboardAPI(user: self.userTextField.text, password: self.passwordTextField.text)
+        }.disposed(by: disposableBag)
     }
+
+   
+    func getCompanyWith(token:String){
+        
+        let provider =  MoyaProvider<CompanyRouter>()
+        
+        let companyService = CompanyServiceImpl(provider: provider)
+        
+        companyService.getCompanyWith(token: token)
+            .mapJSON()
+            .subscribe(onSuccess: { (response) in
+                
+            }) { (error) in
+                
+        }.disposed(by: disposableBag)
+    }
+    
+    
+    
     
     func callPingboardAPI(user:String?,password:String?){
         
@@ -83,38 +110,5 @@ class LoginViewController: UIViewController {
             
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-
-
-
-
-
-extension String{
-    
-}
-extension LoginViewController
-{
-   
-    
-}
-
-enum Color {
-    
-    case blue
-    case black
-    case white
-    
-    
-}

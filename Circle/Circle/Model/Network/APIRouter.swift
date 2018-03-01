@@ -23,7 +23,7 @@ extension AuthRouter:TargetType{
     var path: String {
         switch self {
         case .authenticate:
-            return "/token?grant_type=password"
+            return "/token"
         }
     }
     
@@ -40,7 +40,7 @@ extension AuthRouter:TargetType{
     }
     
     var task: Task {
-        if let parameters = parameters {
+        if let parameters = self.parameters {
              return .requestParameters(parameters: parameters, encoding: parameterEncoding)
         } else {
              return .requestPlain
@@ -54,12 +54,12 @@ extension AuthRouter:TargetType{
     var parameters: [String : Any]? {
         switch self {
         case .authenticate(let username,let password):
-            return ["username":username,"password":password]
+            return ["username":username,"password":password,"grant_type":"password"]
         }
     }
     
     var parameterEncoding: ParameterEncoding {
-        return JSONEncoding.default
+        return URLEncoding.httpBody
     }
     
     

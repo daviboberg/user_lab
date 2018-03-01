@@ -48,9 +48,6 @@
                                 <state key="normal" title="Entrar">
                                     <color key="titleColor" red="0.13725490196078433" green="0.59215686274509804" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="K0h-G6-eDn" kind="show" id="nwM-WB-C28"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -258,7 +255,6 @@
                             <constraint firstItem="ffD-QZ-1QR" firstAttribute="trailing" secondItem="zns-cE-Gew" secondAttribute="trailing" id="B4l-3b-Vyk"/>
                             <constraint firstItem="zns-cE-Gew" firstAttribute="top" secondItem="GFy-g4-xIA" secondAttribute="bottom" constant="15" id="CXQ-hI-bQE"/>
                             <constraint firstItem="3Al-Nl-ILB" firstAttribute="leading" secondItem="ffD-QZ-1QR" secondAttribute="leading" id="Dv2-1B-DFv"/>
-                            <constraint firstItem="3Al-Nl-ILB" firstAttribute="centerX" secondItem="TDa-uA-zVo" secondAttribute="centerXWithinMargins" id="Eg5-Uc-LPC"/>
                             <constraint firstItem="GFy-g4-xIA" firstAttribute="top" secondItem="PTV-Zo-fLZ" secondAttribute="bottom" constant="57" id="GoC-C0-xKZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GFy-g4-xIA" secondAttribute="trailing" id="PIA-V5-vUW"/>
                             <constraint firstItem="pfz-Wc-hc2" firstAttribute="centerX" secondItem="TDa-uA-zVo" secondAttribute="centerXWithinMargins" id="SHz-fx-q1S"/>
