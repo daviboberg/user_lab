@@ -16,6 +16,10 @@
 		3C4EB2F05FCDED0BED88FA24 /* Pods_CircleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA515A5A5D8136330E9D74F7 /* Pods_CircleUITests.framework */; };
 		4940039CC449E36B85A64342 /* Pods_Circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07FFD559D466226820980A0 /* Pods_Circle.framework */; };
 		73D11F5020471874009306EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F4F20471874009306EF /* LoginViewController.swift */; };
+		73D11F5320484A2F009306EF /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5220484A2F009306EF /* APIRouter.swift */; };
+		73D11F5520484B26009306EF /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5420484B26009306EF /* NetworkConstants.swift */; };
+		73D11F58204866EE009306EF /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F57204866EE009306EF /* AuthRepository.swift */; };
+		73D11F5A204868C8009306EF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F59204868C8009306EF /* AuthService.swift */; };
 		D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF09F02048364C00393DCC /* UserListViewController.swift */; };
 		F26C36E60F0728842E4F7519 /* Pods_CircleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DAE101729C534B19323B6E /* Pods_CircleTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,10 @@
 		36DAE101729C534B19323B6E /* Pods_CircleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		716F1A2217452C7BA280913C /* Pods-CircleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleUITests/Pods-CircleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		73D11F4F20471874009306EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		73D11F5220484A2F009306EF /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		73D11F5420484B26009306EF /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		73D11F57204866EE009306EF /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		73D11F59204868C8009306EF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A07FFD559D466226820980A0 /* Pods_Circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E6F742058C86954313C2F0 /* Pods-Circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Circle/Pods-Circle.release.xcconfig"; sourceTree = "<group>"; };
 		CB41F1FAC2E6D095D0825661 /* Pods-CircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleTests/Pods-CircleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,8 +124,9 @@
 		00EAC1512046F982009494A2 /* Circle */ = {
 			isa = PBXGroup;
 			children = (
+				00EAC15E2046F982009494A2 /* Info.plist */,
+				73D11F5120483ED4009306EF /* Model */,
 				D4DF09F720483A3100393DCC /* Assets */,
-				D4DF09F22048394900393DCC /* Model */,
 				D4DF09F32048395100393DCC /* View */,
 				D4DF09F42048395800393DCC /* Controller */,
 			);
@@ -140,6 +149,25 @@
 				00EAC1742046F982009494A2 /* Info.plist */,
 			);
 			path = CircleUITests;
+			sourceTree = "<group>";
+		};
+		73D11F5120483ED4009306EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73D11F562048666F009306EF /* Network */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73D11F562048666F009306EF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				73D11F5420484B26009306EF /* NetworkConstants.swift */,
+				73D11F5220484A2F009306EF /* APIRouter.swift */,
+				73D11F57204866EE009306EF /* AuthRepository.swift */,
+				73D11F59204868C8009306EF /* AuthService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		A2466095AEC25754EF03840F /* Frameworks */ = {
@@ -165,13 +193,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D4DF09F22048394900393DCC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		D4DF09F32048395100393DCC /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				00EAC1592046F982009494A2 /* Assets.xcassets */,
-				00EAC15E2046F982009494A2 /* Info.plist */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -361,10 +381,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Circle/Pods-Circle-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,8 +526,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D11F5020471874009306EF /* LoginViewController.swift in Sources */,
+				73D11F5320484A2F009306EF /* APIRouter.swift in Sources */,
+				73D11F5520484B26009306EF /* NetworkConstants.swift in Sources */,
+				73D11F58204866EE009306EF /* AuthRepository.swift in Sources */,
 				00EAC1532046F982009494A2 /* AppDelegate.swift in Sources */,
 				D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */,
+				73D11F5A204868C8009306EF /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
