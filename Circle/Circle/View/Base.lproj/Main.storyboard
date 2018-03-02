@@ -71,6 +71,7 @@
                         <outlet property="logoLabel" destination="S7L-gS-NB8" id="ig3-zi-bon"/>
                         <outlet property="passwordTextField" destination="NSu-vd-SQM" id="3c8-Tz-GAC"/>
                         <outlet property="userTextField" destination="sL8-NW-8Jf" id="zM1-8p-grI"/>
+                        <segue destination="K0h-G6-eDn" kind="show" identifier="LoginSegue" id="1Pn-H8-gt8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmu-IK-nZa" userLabel="First Responder" sceneMemberID="firstResponder"/>

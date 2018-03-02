@@ -52,6 +52,7 @@ class LoginViewController: UIViewController {
             response.mapJSON()
                 .subscribe(onSuccess: { (response) in
                 print(response)
+                    self.performSegue(withIdentifier: "LoginSegue", sender: self)
                 }, onError: { (error) in
                     print(error)
                 }).disposed(by: self.disposableBag)
