@@ -209,10 +209,10 @@
             </objects>
             <point key="canvasLocation" x="1160.8" y="-431.33433283358323"/>
         </scene>
-        <!--View Controller-->
+        <!--User Profile View Controller-->
         <scene sceneID="yyt-rQ-g5a">
             <objects>
-                <viewController id="0vv-2m-nA7" sceneMemberID="viewController">
+                <viewController id="0vv-2m-nA7" customClass="UserProfileViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TDa-uA-zVo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,6 +277,14 @@
                         <viewLayoutGuide key="safeArea" id="6XF-ya-S1T"/>
                     </view>
                     <navigationItem key="navigationItem" id="GhY-SO-56Z"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="3Al-Nl-ILB" id="A1m-fu-shB"/>
+                        <outlet property="logoutButton" destination="pfz-Wc-hc2" id="crQ-YV-Z24"/>
+                        <outlet property="positionLabel" destination="zns-cE-Gew" id="KGr-ZK-ddD"/>
+                        <outlet property="profileImageView" destination="PTV-Zo-fLZ" id="LOC-at-cO1"/>
+                        <outlet property="profileNameLabel" destination="GFy-g4-xIA" id="KBh-8t-qe6"/>
+                        <outlet property="teamLabel" destination="ffD-QZ-1QR" id="gsu-uB-fZa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbt-gy-ssv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

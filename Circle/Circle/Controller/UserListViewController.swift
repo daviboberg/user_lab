@@ -23,6 +23,8 @@ class UserListViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        setUpBinding()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +55,7 @@ extension UserListViewController{
             .items(cellIdentifier: "userCell", cellType: UserListTableViewCell.self)){
                 row,element,cell in
             
+                cell.usernameLabel.text = element
         }.disposed(by: disposableBag)
         
     }
