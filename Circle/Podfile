@@ -12,6 +12,9 @@ target 'Circle' do
   pod 'Moya/RxSwift'
   pod 'Alamofire'
   pod 'Moya-ModelMapper/RxSwift'
+  
+  pod 'Eureka'
+  pod 'RxEureka'
   target 'CircleTests' do
     inherit! :search_paths
     # Pods for testing
