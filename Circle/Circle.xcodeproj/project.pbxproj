@@ -116,6 +116,7 @@
 		00EAC1512046F982009494A2 /* Circle */ = {
 			isa = PBXGroup;
 			children = (
+				00EAC15E2046F982009494A2 /* Info.plist */,
 				D4DF09F720483A3100393DCC /* Assets */,
 				D4DF09F22048394900393DCC /* Model */,
 				D4DF09F32048395100393DCC /* View */,
@@ -195,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				00EAC1592046F982009494A2 /* Assets.xcassets */,
-				00EAC15E2046F982009494A2 /* Info.plist */,
 			);
 			path = Assets;
 			sourceTree = "<group>";

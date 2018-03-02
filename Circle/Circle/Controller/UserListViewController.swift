@@ -10,6 +10,12 @@ import UIKit
 
 class UserListViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableImage: UIImageView!
+    @IBOutlet weak var nameUILabel: UILabel!
+    @IBOutlet weak var teamUILabel: UILabel!
+    @IBOutlet weak var tableCell: UITableViewCell!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
