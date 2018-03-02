@@ -12,11 +12,12 @@ import RxCocoa
 
 class UserListViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableImage: UIImageView!
-    @IBOutlet weak var nameUILabel: UILabel!
-    @IBOutlet weak var teamUILabel: UILabel!
-    @IBOutlet weak var tableCell: UITableViewCell!
+    @IBOutlet weak var userListTableView: UITableView!
+    
+    
+    var userList: Observable<[String]>! = Observable.of(["Argentina", "Bolívia", "Brasil", "Chile", "Colômbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela"])
+    
+    let disposableBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,23 @@ extension UserListViewController{
     
     
     func setUpBinding(){
+        
+        
+//        userListTableView
+//            .rx
+//            .items(cellIdentifier: "userCell", cellType: UserListTableViewCell.self){
+//                row, element, cell in
+//
+//
+//            }.disposed(by: disposableBag)
+//
+        
+        userList.bind(to: userListTableView
+            .rx
+            .items(cellIdentifier: "userCell", cellType: UserListTableViewCell.self)){
+                row,element,cell in
+            
+        }.disposed(by: disposableBag)
         
     }
 }

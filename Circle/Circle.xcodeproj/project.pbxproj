@@ -23,6 +23,7 @@
 		73D11F5C204886AA009306EF /* CompanyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5B204886AA009306EF /* CompanyRouter.swift */; };
 		73D11F5E2048A60D009306EF /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5D2048A60D009306EF /* CompanyService.swift */; };
 		73D11F602048A6A4009306EF /* CompanyServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5F2048A6A4009306EF /* CompanyServiceImpl.swift */; };
+		73D11F63204990D5009306EF /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F62204990D5009306EF /* UserListTableViewCell.swift */; };
 		D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF09F02048364C00393DCC /* UserListViewController.swift */; };
 		F26C36E60F0728842E4F7519 /* Pods_CircleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DAE101729C534B19323B6E /* Pods_CircleTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		73D11F5B204886AA009306EF /* CompanyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRouter.swift; sourceTree = "<group>"; };
 		73D11F5D2048A60D009306EF /* CompanyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyService.swift; sourceTree = "<group>"; };
 		73D11F5F2048A6A4009306EF /* CompanyServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyServiceImpl.swift; sourceTree = "<group>"; };
+		73D11F62204990D5009306EF /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		A07FFD559D466226820980A0 /* Pods_Circle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Circle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E6F742058C86954313C2F0 /* Pods-Circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Circle/Pods-Circle.release.xcconfig"; sourceTree = "<group>"; };
 		CB41F1FAC2E6D095D0825661 /* Pods-CircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleTests/Pods-CircleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		73D11F5120483ED4009306EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				73D11F61204990B0009306EF /* TableViewCell */,
 				73D11F562048666F009306EF /* Network */,
 			);
 			path = Model;
@@ -177,6 +180,14 @@
 				73D11F5F2048A6A4009306EF /* CompanyServiceImpl.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		73D11F61204990B0009306EF /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				73D11F62204990D5009306EF /* UserListTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		A2466095AEC25754EF03840F /* Frameworks */ = {
@@ -537,6 +548,7 @@
 				73D11F5020471874009306EF /* LoginViewController.swift in Sources */,
 				73D11F5320484A2F009306EF /* APIRouter.swift in Sources */,
 				73D11F5520484B26009306EF /* NetworkConstants.swift in Sources */,
+				73D11F63204990D5009306EF /* UserListTableViewCell.swift in Sources */,
 				73D11F58204866EE009306EF /* AuthService.swift in Sources */,
 				73D11F5E2048A60D009306EF /* CompanyService.swift in Sources */,
 				00EAC1532046F982009494A2 /* AppDelegate.swift in Sources */,
