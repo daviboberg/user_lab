@@ -37,8 +37,9 @@ class AuthServiceImpl: AuthService {
                 let json = try! JSONSerialization.jsonObject(with: data, options: [])
                 
                 print(statusCode)
-                
+                print(json)
                 completion(data)
+                
                 
             case let .failure(error):
                 print("Deu ruim. Erro: \(error)")
