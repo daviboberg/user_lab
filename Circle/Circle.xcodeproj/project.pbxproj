@@ -24,6 +24,8 @@
 		73D11F5E2048A60D009306EF /* CompanyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5D2048A60D009306EF /* CompanyService.swift */; };
 		73D11F602048A6A4009306EF /* CompanyServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5F2048A6A4009306EF /* CompanyServiceImpl.swift */; };
 		D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF09F02048364C00393DCC /* UserListViewController.swift */; };
+		EE4D581A2049BCFB0090B542 /* UserManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D58182049BCFB0090B542 /* UserManagerImpl.swift */; };
+		EE4D581B2049BCFB0090B542 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D58192049BCFB0090B542 /* UserManager.swift */; };
 		F26C36E60F0728842E4F7519 /* Pods_CircleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DAE101729C534B19323B6E /* Pods_CircleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		D4DF09F02048364C00393DCC /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		DA515A5A5D8136330E9D74F7 /* Pods_CircleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD059C8953CE91C07C8B471D /* Pods-CircleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleUITests/Pods-CircleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE4D58182049BCFB0090B542 /* UserManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManagerImpl.swift; sourceTree = "<group>"; };
+		EE4D58192049BCFB0090B542 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 		73D11F5120483ED4009306EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EE4D58192049BCFB0090B542 /* UserManager.swift */,
+				EE4D58182049BCFB0090B542 /* UserManagerImpl.swift */,
 				73D11F562048666F009306EF /* Network */,
 			);
 			path = Model;
@@ -536,9 +542,11 @@
 			files = (
 				73D11F5020471874009306EF /* LoginViewController.swift in Sources */,
 				73D11F5320484A2F009306EF /* APIRouter.swift in Sources */,
+				EE4D581A2049BCFB0090B542 /* UserManagerImpl.swift in Sources */,
 				73D11F5520484B26009306EF /* NetworkConstants.swift in Sources */,
 				73D11F58204866EE009306EF /* AuthService.swift in Sources */,
 				73D11F5E2048A60D009306EF /* CompanyService.swift in Sources */,
+				EE4D581B2049BCFB0090B542 /* UserManager.swift in Sources */,
 				00EAC1532046F982009494A2 /* AppDelegate.swift in Sources */,
 				D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */,
 				73D11F602048A6A4009306EF /* CompanyServiceImpl.swift in Sources */,
