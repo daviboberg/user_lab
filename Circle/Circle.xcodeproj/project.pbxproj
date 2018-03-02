@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00113D1420499973004E5971 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00113D1320499973004E5971 /* User.swift */; };
+		00113D162049B23C004E5971 /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00113D152049B23C004E5971 /* LocalUser.swift */; };
+		00113D182049B255004E5971 /* PingboardUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00113D172049B255004E5971 /* PingboardUser.swift */; };
 		00EAC1532046F982009494A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAC1522046F982009494A2 /* AppDelegate.swift */; };
 		00EAC1582046F982009494A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00EAC1562046F982009494A2 /* Main.storyboard */; };
 		00EAC15A2046F982009494A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00EAC1592046F982009494A2 /* Assets.xcassets */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00113D1320499973004E5971 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		00113D152049B23C004E5971 /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
+		00113D172049B255004E5971 /* PingboardUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingboardUser.swift; sourceTree = "<group>"; };
 		00EAC14F2046F982009494A2 /* Circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00EAC1522046F982009494A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00EAC1572046F982009494A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				73D11F562048666F009306EF /* Network */,
+				00113D1320499973004E5971 /* User.swift */,
+				00113D152049B23C004E5971 /* LocalUser.swift */,
+				00113D172049B255004E5971 /* PingboardUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -535,15 +544,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D11F5020471874009306EF /* LoginViewController.swift in Sources */,
+				00113D182049B255004E5971 /* PingboardUser.swift in Sources */,
 				73D11F5320484A2F009306EF /* APIRouter.swift in Sources */,
 				73D11F5520484B26009306EF /* NetworkConstants.swift in Sources */,
 				73D11F58204866EE009306EF /* AuthService.swift in Sources */,
+				00113D162049B23C004E5971 /* LocalUser.swift in Sources */,
 				73D11F5E2048A60D009306EF /* CompanyService.swift in Sources */,
 				00EAC1532046F982009494A2 /* AppDelegate.swift in Sources */,
 				D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */,
 				73D11F602048A6A4009306EF /* CompanyServiceImpl.swift in Sources */,
 				73D11F5C204886AA009306EF /* CompanyRouter.swift in Sources */,
 				73D11F5A204868C8009306EF /* AuthServiceImpl.swift in Sources */,
+				00113D1420499973004E5971 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
