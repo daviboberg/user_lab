@@ -15,6 +15,11 @@
 		00EAC1732046F982009494A2 /* CircleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAC1722046F982009494A2 /* CircleUITests.swift */; };
 		3C4EB2F05FCDED0BED88FA24 /* Pods_CircleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA515A5A5D8136330E9D74F7 /* Pods_CircleUITests.framework */; };
 		4940039CC449E36B85A64342 /* Pods_Circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07FFD559D466226820980A0 /* Pods_Circle.framework */; };
+		730B7BA9204D82BC0062DE0C /* PingboardUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA4204D82BB0062DE0C /* PingboardUser.swift */; };
+		730B7BAA204D82BC0062DE0C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA5204D82BB0062DE0C /* User.swift */; };
+		730B7BAB204D82BC0062DE0C /* UserManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA6204D82BC0062DE0C /* UserManagerImpl.swift */; };
+		730B7BAC204D82BC0062DE0C /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA7204D82BC0062DE0C /* LocalUser.swift */; };
+		730B7BAD204D82BC0062DE0C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA8204D82BC0062DE0C /* UserManager.swift */; };
 		73D11F5020471874009306EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F4F20471874009306EF /* LoginViewController.swift */; };
 		73D11F5320484A2F009306EF /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5220484A2F009306EF /* APIRouter.swift */; };
 		73D11F5520484B26009306EF /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5420484B26009306EF /* NetworkConstants.swift */; };
@@ -72,6 +77,11 @@
 		1D630A61C4E34B9D63917812 /* Pods-Circle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Circle/Pods-Circle.debug.xcconfig"; sourceTree = "<group>"; };
 		36DAE101729C534B19323B6E /* Pods_CircleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		716F1A2217452C7BA280913C /* Pods-CircleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleUITests/Pods-CircleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		730B7BA4204D82BB0062DE0C /* PingboardUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingboardUser.swift; sourceTree = "<group>"; };
+		730B7BA5204D82BB0062DE0C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		730B7BA6204D82BC0062DE0C /* UserManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManagerImpl.swift; sourceTree = "<group>"; };
+		730B7BA7204D82BC0062DE0C /* LocalUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
+		730B7BA8204D82BC0062DE0C /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		73D11F4F20471874009306EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73D11F5220484A2F009306EF /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		73D11F5420484B26009306EF /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
@@ -182,6 +192,11 @@
 		73D11F5120483ED4009306EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				730B7BA7204D82BC0062DE0C /* LocalUser.swift */,
+				730B7BA4204D82BB0062DE0C /* PingboardUser.swift */,
+				730B7BA5204D82BB0062DE0C /* User.swift */,
+				730B7BA8204D82BC0062DE0C /* UserManager.swift */,
+				730B7BA6204D82BC0062DE0C /* UserManagerImpl.swift */,
 				73D11F61204990B0009306EF /* TableViewCell */,
 				73D11F562048666F009306EF /* Network */,
 			);
@@ -580,6 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D11F5020471874009306EF /* LoginViewController.swift in Sources */,
+				730B7BAC204D82BC0062DE0C /* LocalUser.swift in Sources */,
 				73D11F652049B323009306EF /* UserProfileViewController.swift in Sources */,
 				D493CD0B20499BCB008E854D /* UsersCollectService.swift in Sources */,
 				D493CD15204D6DC8008E854D /* UserServiceImpl.swift in Sources */,
@@ -590,16 +606,20 @@
 				73D11F672049BD1A009306EF /* EvaluationViewController.swift in Sources */,
 				73D11F5E2048A60D009306EF /* CompanyService.swift in Sources */,
 				73D11F692049BDE1009306EF /* FormTableViewCell.swift in Sources */,
+				730B7BA9204D82BC0062DE0C /* PingboardUser.swift in Sources */,
 				00EAC1532046F982009494A2 /* AppDelegate.swift in Sources */,
 				D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */,
 				73D11FA52049D323009306EF /* EvaluationFormViewController.swift in Sources */,
+				730B7BAD204D82BC0062DE0C /* UserManager.swift in Sources */,
 				73D11F602048A6A4009306EF /* CompanyServiceImpl.swift in Sources */,
 				D493CD092049922A008E854D /* UsersCollectRouter.swift in Sources */,
 				73D11F5C204886AA009306EF /* CompanyRouter.swift in Sources */,
 				D493CD13204D6CE4008E854D /* UserService.swift in Sources */,
 				D493CD112049DD2F008E854D /* UserRouter.swift in Sources */,
+				730B7BAB204D82BC0062DE0C /* UserManagerImpl.swift in Sources */,
 				73D11F5A204868C8009306EF /* AuthServiceImpl.swift in Sources */,
 				D493CD0D20499CBC008E854D /* UsersCollectServiceImpl.swift in Sources */,
+				730B7BAA204D82BC0062DE0C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
