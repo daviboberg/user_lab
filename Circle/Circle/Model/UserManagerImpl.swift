@@ -32,13 +32,13 @@ class UserManagerImpl : UserManager{
     func getUser() -> LocalUser{
         
         let defaults = UserDefaults.standard
-        var user = LocalUser()
+        let user = LocalUser()
         
         if let access_token = defaults.string(forKey: "access_token"){
             user.access_token = access_token
         }
         if let expires_in = defaults.object(forKey: "expires_in") as? integer_t{
-            user.expires_in = expires_in as String
+            user.expires_in = String(expires_in)
         }
         if let refresh_token = defaults.string(forKey: "refresh_token"){
             user.refresh_token = refresh_token

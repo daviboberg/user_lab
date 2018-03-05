@@ -28,6 +28,7 @@
 		D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DF09F02048364C00393DCC /* UserListViewController.swift */; };
 		EE4D581A2049BCFB0090B542 /* UserManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D58182049BCFB0090B542 /* UserManagerImpl.swift */; };
 		EE4D581B2049BCFB0090B542 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D58192049BCFB0090B542 /* UserManager.swift */; };
+		EE76DB78204D6E02007E7520 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76DB77204D6E02007E7520 /* User.swift */; };
 		F26C36E60F0728842E4F7519 /* Pods_CircleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DAE101729C534B19323B6E /* Pods_CircleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		DD059C8953CE91C07C8B471D /* Pods-CircleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleUITests/Pods-CircleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE4D58182049BCFB0090B542 /* UserManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManagerImpl.swift; sourceTree = "<group>"; };
 		EE4D58192049BCFB0090B542 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		EE76DB77204D6E02007E7520 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Network/User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				73D11F562048666F009306EF /* Network */,
 				00113D152049B23C004E5971 /* LocalUser.swift */,
 				00113D172049B255004E5971 /* PingboardUser.swift */,
+				EE76DB77204D6E02007E7520 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				73D11F58204866EE009306EF /* AuthService.swift in Sources */,
 				00113D162049B23C004E5971 /* LocalUser.swift in Sources */,
 				73D11F5E2048A60D009306EF /* CompanyService.swift in Sources */,
+				EE76DB78204D6E02007E7520 /* User.swift in Sources */,
 				EE4D581B2049BCFB0090B542 /* UserManager.swift in Sources */,
 				00EAC1532046F982009494A2 /* AppDelegate.swift in Sources */,
 				D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */,
