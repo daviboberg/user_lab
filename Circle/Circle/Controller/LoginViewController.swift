@@ -52,12 +52,17 @@ class LoginViewController: UIViewController {
             response.mapJSON()
                 .subscribe(onSuccess: { (response) in
                 print(response)
+                    self.performSegue(withIdentifier: "LoginSegue", sender: self)
                 }, onError: { (error) in
                     print(error)
                 }).disposed(by: self.disposableBag)
         }.disposed(by: disposableBag)
     }
 
+    func testUser(){
+//        let provider: "https://private-anon-ec88e38654-pingboard.apiary-mock.com/api/v2/users/1""
+    }
+    
     func getCompanyWith(token:String){
         
         let provider =  MoyaProvider<CompanyRouter>()
