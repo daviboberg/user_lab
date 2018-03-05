@@ -11,5 +11,5 @@ import Foundation
 protocol UserManager {
     
     func saveUser(user: LocalUser)
-    func getUser() -> LocalUser
+    func loadUser() -> LocalUser
 }
