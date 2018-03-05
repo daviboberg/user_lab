@@ -387,10 +387,10 @@
             </objects>
             <point key="canvasLocation" x="3417" y="266"/>
         </scene>
-        <!--View Controller-->
+        <!--Evaluation Profile View Controller-->
         <scene sceneID="tmi-5F-Ld7">
             <objects>
-                <viewController id="Lsa-US-kfp" sceneMemberID="viewController">
+                <viewController id="Lsa-US-kfp" customClass="EvaluationProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D7t-cQ-Te0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -456,10 +456,18 @@
                         <viewLayoutGuide key="safeArea" id="EbZ-iC-Smh"/>
                     </view>
                     <navigationItem key="navigationItem" id="6A8-UX-XfX"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="ccS-0f-hmq" id="OzM-0I-r2B"/>
+                        <outlet property="evaluateButton" destination="mkP-mX-7EY" id="Kf4-uR-Fb6"/>
+                        <outlet property="positionLabel" destination="ZAw-BV-BoP" id="uCv-bU-o1G"/>
+                        <outlet property="profileImageView" destination="1Bn-lQ-imY" id="xeV-Qz-j6b"/>
+                        <outlet property="profileNameLabel" destination="nrW-Jd-6uH" id="h5j-D1-cTa"/>
+                        <outlet property="teamLabel" destination="WJ7-fl-DDb" id="97v-GH-WO0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1q-5S-4qC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2009" y="-431"/>
+            <point key="canvasLocation" x="2098" y="-431"/>
         </scene>
     </scenes>
 </document>
