@@ -12,7 +12,6 @@ import RxSwift
 
 protocol CompanyService {
     
-    func getCompanyWith(token:String)->Single<Response>
-    
+    func getCompanyWith(token:String)->Single<Response> 
 
 }
