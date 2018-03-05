@@ -59,6 +59,10 @@ class LoginViewController: UIViewController {
         }.disposed(by: disposableBag)
     }
 
+    func testUser(){
+//        let provider: "https://private-anon-ec88e38654-pingboard.apiary-mock.com/api/v2/users/1""
+    }
+    
     func getCompanyWith(token:String){
         
         let provider =  MoyaProvider<CompanyRouter>()
