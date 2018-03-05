@@ -18,6 +18,7 @@ class UserServiceImpl:UserService {
     private var provider:MoyaProvider<UserRouter>
 
     func getUser(token: String, id: String) -> PrimitiveSequence<SingleTrait, Response> {
-        return provider.rx.request(.getUser(token:token, id:id)).filter(statusCode: 200)
+        return provider.rx.request(.getUser(token:token, id:id))
+            //.filter(statusCode: 200)
     }
 }

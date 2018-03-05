@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.6.0)
   - Eureka (4.0.1)
+  - Kingfisher (4.6.2)
   - ModelMapper (7.4.1)
   - Moya (11.0.1):
     - Moya/Core (= 11.0.1)
@@ -28,6 +29,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Eureka
+  - Kingfisher
   - Moya-ModelMapper/RxSwift
   - Moya/RxSwift
   - RxCocoa
@@ -37,6 +39,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   Eureka: c8bd5cc07143b6f66268c208d28a246c99b41955
+  Kingfisher: 55b9c395bf8d3949676ad3861111923990ab68cf
   ModelMapper: e576b4e32007bf574d0f9e4f533d29c46d29f146
   Moya: 3d594ada51a21cc02b18739ab578a1984f900c8a
   Moya-ModelMapper: 9aa8a99cb664a083b376869d6091c1f20d9f171e
@@ -45,6 +48,6 @@ SPEC CHECKSUMS:
   RxEureka: bccf9ff1c81bd08094d71c98314cae035c675c31
   RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: e7ca351170bd8502dbb016e5c75380de25be2f50
+PODFILE CHECKSUM: 1aba35acb71cae4a751e67ac9d470a3b132daeae
 
 COCOAPODS: 1.4.0

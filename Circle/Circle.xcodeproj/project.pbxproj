@@ -20,6 +20,8 @@
 		730B7BAB204D82BC0062DE0C /* UserManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA6204D82BC0062DE0C /* UserManagerImpl.swift */; };
 		730B7BAC204D82BC0062DE0C /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA7204D82BC0062DE0C /* LocalUser.swift */; };
 		730B7BAD204D82BC0062DE0C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA8204D82BC0062DE0C /* UserManager.swift */; };
+		730B7BAF204DA1360062DE0C /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BAE204DA1360062DE0C /* UserSingleton.swift */; };
+		730B7BB3204DAE8D0062DE0C /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BB2204DAE8D0062DE0C /* TokenManager.swift */; };
 		73D11F5020471874009306EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F4F20471874009306EF /* LoginViewController.swift */; };
 		73D11F5320484A2F009306EF /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5220484A2F009306EF /* APIRouter.swift */; };
 		73D11F5520484B26009306EF /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5420484B26009306EF /* NetworkConstants.swift */; };
@@ -82,6 +84,8 @@
 		730B7BA6204D82BC0062DE0C /* UserManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManagerImpl.swift; sourceTree = "<group>"; };
 		730B7BA7204D82BC0062DE0C /* LocalUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
 		730B7BA8204D82BC0062DE0C /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		730B7BAE204DA1360062DE0C /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
+		730B7BB2204DAE8D0062DE0C /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		73D11F4F20471874009306EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73D11F5220484A2F009306EF /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		73D11F5420484B26009306EF /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				730B7BA6204D82BC0062DE0C /* UserManagerImpl.swift */,
 				73D11F61204990B0009306EF /* TableViewCell */,
 				73D11F562048666F009306EF /* Network */,
+				730B7BAE204DA1360062DE0C /* UserSingleton.swift */,
+				730B7BB2204DAE8D0062DE0C /* TokenManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Circle/Pods-Circle-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
@@ -460,6 +467,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
@@ -605,7 +613,9 @@
 				73D11F58204866EE009306EF /* AuthService.swift in Sources */,
 				73D11F672049BD1A009306EF /* EvaluationViewController.swift in Sources */,
 				73D11F5E2048A60D009306EF /* CompanyService.swift in Sources */,
+				730B7BAF204DA1360062DE0C /* UserSingleton.swift in Sources */,
 				73D11F692049BDE1009306EF /* FormTableViewCell.swift in Sources */,
+				730B7BB3204DAE8D0062DE0C /* TokenManager.swift in Sources */,
 				730B7BA9204D82BC0062DE0C /* PingboardUser.swift in Sources */,
 				00EAC1532046F982009494A2 /* AppDelegate.swift in Sources */,
 				D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */,

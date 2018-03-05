@@ -20,7 +20,7 @@ extension UsersCollectRouter:TargetType {
     var path: String {
         switch self {
         case .getUsersCollect:
-            return "/users?"
+            return "/users"
         }
     }
     
