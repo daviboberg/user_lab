@@ -46,7 +46,7 @@ class UserListViewController: UIViewController {
         
         
         guard let token = UserSingleton.instance.tokenManager?.accessToken else {
-            //TODO: COlocar um aviso pro usuario caso nao funcione
+            //TODO: Colocar um aviso pro usuario caso nao funcione
             return
         }
         let response = userCollectService.getUsersCollect(token: token)
