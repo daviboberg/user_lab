@@ -15,12 +15,12 @@ class EvaluationFormViewController: FormViewController {
 
     let disposableBag = DisposeBag()
     
+    
+    //var questions
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        createForm(questions: ["olaarr", "tudo beeeem?", "quem quer?"])
+        createForm(questions: ["olaarr", "tudo beeeem?", "quem quer?","narutinho"])
         print(form.values())
         
         // Do any additional setup after loading the view.
@@ -38,21 +38,16 @@ extension EvaluationFormViewController{
     
     func createForm(questions:[String]){
         
-        
-        
-        
         questions.forEach { (question) in
-
             let section = Section(question)
             let row = SegmentedRow<String>(){
                 $0.options = ["Nunca", "As vezes", "Sempre"]
                 $0.value = "As vezes"
-             
             }
-            
+    
             row.rx.value.subscribe{ value in
                 print(value)
-            }
+            }.disposed(by: disposableBag)
             section <<< row
             form +++ section
         }

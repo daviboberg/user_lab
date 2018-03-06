@@ -31,12 +31,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
-        
-    
-        
-//
-//
-//
     }
     
     
@@ -65,17 +59,11 @@ class LoginViewController: UIViewController {
                     guard let resultDictionary = result as? Dictionary<String,AnyObject> else {
                         return
                     }
-                   
-                   
-                 
                     
                     let token = resultDictionary["access_token"] as! String
-                    
-                    
+            
                     UserSingleton.instance.tokenManager  = TokenManager(dictionary: resultDictionary)
-                    
-                    
-                    
+    
                     self.getUserWith(token: token)
        
                     self.performSegue(withIdentifier: "LoginSegue", sender: self)
