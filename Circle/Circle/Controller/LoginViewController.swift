@@ -31,7 +31,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        
+    
+        
+//
+//
+//
     }
+    
+    
 
     
     override func didReceiveMemoryWarning() {
@@ -50,18 +58,62 @@ class LoginViewController: UIViewController {
 
             let response = authService.authenticate(user: self.userTextField.text!, password: self.passwordTextField.text!)
             response.mapJSON()
-                .subscribe(onSuccess: { (response) in
+                .subscribe(onSuccess: { (result) in
                 print(response)
+                    //
+                
+                    guard let resultDictionary = result as? Dictionary<String,AnyObject> else {
+                        return
+                    }
+                   
+                   
+                 
+                    
+                    let token = resultDictionary["access_token"] as! String
+                    
+                    
+                    UserSingleton.instance.tokenManager  = TokenManager(dictionary: resultDictionary)
+                    
+                    
+                    
+                    self.getUserWith(token: token)
+       
                     self.performSegue(withIdentifier: "LoginSegue", sender: self)
+                
                 }, onError: { (error) in
                     print(error)
                 }).disposed(by: self.disposableBag)
         }.disposed(by: disposableBag)
     }
 
+    
+    
+    
+    func getUserWith(token:String){
+        
+        let provider = MoyaProvider<UserRouter>(plugins: [NetworkLoggerPlugin()])
+        
+        let userService = UserServiceImpl(provider: provider)
+        
+        let response = userService.getUser(token: token, id: "me")
+        
+        response.mapJSON()
+            .subscribe(onSuccess: { (result) in
+                
+                print(result)
+                
+            }) { (error) in
+                
+                print(error)
+            }.disposed(by: disposableBag)
+    
+    }
+    
+    
+    
     func getCompanyWith(token:String){
         
-        let provider =  MoyaProvider<CompanyRouter>()
+        let provider =  MoyaProvider<CompanyRouter>(plugins: [NetworkLoggerPlugin()])
         
         let companyService = CompanyServiceImpl(provider: provider)
         

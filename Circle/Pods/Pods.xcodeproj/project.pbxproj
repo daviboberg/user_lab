@@ -599,12 +599,12 @@
 			remoteGlobalIDString = CD6C9FB6B052E1CF663F8A56041EA163;
 			remoteInfo = ObjectMapper;
 		};
-		188F018D93EC1DBBF74E817AB7A28B90 /* PBXContainerItemProxy */ = {
+		1A57D375232234C38687FAEF740C7DAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9CF599F6CE2F36D6E970E167293356A9;
-			remoteInfo = Result;
+			remoteGlobalIDString = FBCC69D7C794145A1D1F84A3164E6083;
+			remoteInfo = ModelMapper;
 		};
 		2962773AE3801B0C764D34C3416E6DC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -659,8 +659,8 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
-			remoteInfo = Alamofire;
+			remoteGlobalIDString = 3CC23EA08CB045795649F4F6C0A8501E;
+			remoteInfo = "Moya-ModelMapper";
 		};
 		8579E2A5113624014253B6D9511BF624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -754,6 +754,13 @@
 			remoteInfo = Moya;
 		};
 		F5B18A66B119152C29051CF4E8540232 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAF6546944BF8968FDCA33DA7D10B41E;
+			remoteInfo = RxSwift;
+		};
+		F8AA90F1B044B4B2B41E869521E057AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -1421,6 +1428,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		071518118910D8292450D8652DABE7C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E0FE7639EC753928BB88D1F8190854 /* Eureka.framework in Frameworks */,
+				FFD1E0F9459D5B171B2D11A4851229AE /* Foundation.framework in Frameworks */,
+				79586035504D6CFCAC709DA860278483 /* RxCocoa.framework in Frameworks */,
+				F7B05335F6BFCA36D7CF594090827E4A /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C65EC0B6F3EDF5B5AB454D75B039462 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1469,11 +1487,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4BB3AB89F09E5727575CE8FE02DD2E3D /* Frameworks */ = {
+		81DB8915083F404F173895B900F63056 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6D489A26ADCDE3B1FC3C5FF68C40CF4 /* Foundation.framework in Frameworks */,
+				03A285E6179DBE574C1A39DF7454D438 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2083,17 +2101,17 @@
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
-		52959FD6E4950120347B7223EC1D7CCF /* Frameworks */ = {
+		547071D5501D5529CB52601D20839F63 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4417138D63D9FB9D4B14AA83EC1CF22D /* Alamofire.framework */,
-				2FEB7291211958817EE5E88C9249B60E /* Eureka.framework */,
-				3C6526ACEC991A0ABCD105461C30299E /* Mapper.framework */,
-				8185D77A57375A4AF71DCA4DB33568B7 /* Moya.framework */,
-				EC3F996EA654B9E2D1BC04D9CB5A6A4C /* Result.framework */,
-				81450A9C275E8C2F6BB5B22A75CB27FC /* RxCocoa.framework */,
-				CFEE8F8FE8FECA5FE39EE855E7A59EE7 /* RxSwift.framework */,
-				7C0EE245DF15CA028A577641C4CDCE4C /* iOS */,
+				0302788CACFD31CB02D90164CF2F5B67 /* Alamofire.framework */,
+				3B7798C2A5176559F63477301019A0C2 /* Eureka.framework */,
+				C950C774B08608D0ED0A41D9DA2D9EA7 /* Mapper.framework */,
+				314769C0C556997BA3C095D57471368B /* Moya.framework */,
+				86169A676F6A7723D9BE188B74841EA4 /* Result.framework */,
+				D84BF58B2C01481CD457629929B173F3 /* RxCocoa.framework */,
+				EC1375C2762A7B8F89C126998BF3A595 /* RxSwift.framework */,
+				E8877CFEA69CCF58344910CDECF0840B /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2358,7 +2376,7 @@
 				825F607730BD9D92EEDDD23A44AA2E8F /* RxEureka-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/RxEureka";
+			path = "../Target Support Files/RxCocoa";
 			sourceTree = "<group>";
 		};
 		B7A82E9D47EAFB3C1991E360A71CB573 /* nanopb */ = {
@@ -2405,7 +2423,8 @@
 				42E70FAAC7D99035A1210D4A9C929022 /* URLRequest+Encoding.swift */,
 				4CD45CC17376FDEC797B3D04FBF1D7BD /* ValidationType.swift */,
 			);
-			name = Core;
+			name = "Support Files";
+			path = "../Target Support Files/Eureka";
 			sourceTree = "<group>";
 		};
 		B8E3A4D8B796B1772B19DB6F3D9EBC7E /* Support Files */ = {
@@ -2729,11 +2748,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56235C834B3AC78D3236C63E6EEE58D8 /* Headers */ = {
+		761C026431B7C615A8C5C7659D35C39D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5B3EB6452EB67F3BE7B7B800E2DF179 /* Result-umbrella.h in Headers */,
+				945DBEE2954A3C95D301C1B986EDE2D0 /* Pods-Circle-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3545,6 +3564,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3655E23557339BEB9F34D34982DA7C3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B720BEDB4020D07FA2D45369A46F41A7 /* Pods-Circle-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		492B9EF6556AB9A3312FDDFB1D2763F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3587,11 +3614,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7FBF4D2D7BB37EDD0F8020D04D6BA0C2 /* Sources */ = {
+		8041860B2AC8F57FD7C0D4A59A569210 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2451BC2E453F58276FED4FF6D61792E9 /* Pods-CircleUITests-dummy.m in Sources */,
+				8D1C61F3AAAE9777A5A4D4AF1215F574 /* BindableObserver.swift in Sources */,
+				2DCDC05EF6A4E7ADD109B163705BBABC /* RxEureka-dummy.m in Sources */,
+				BC58A7659B9B9C3C032C27FD1654A695 /* RxEureka.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3879,7 +3908,7 @@
 			target = 675A114988AE198732ED4AD726408964 /* Eureka */;
 			targetProxy = 3DF1845E9C106163EFEC1C0376C6737A /* PBXContainerItemProxy */;
 		};
-		8C654DE19E1CF20432EE361239EC5168 /* PBXTargetDependency */ = {
+		5B59B43DD136E29C518C769C3B1BC3F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxSwift;
 			target = CAF6546944BF8968FDCA33DA7D10B41E /* RxSwift */;
@@ -4093,10 +4122,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		15C069F155AD7CFEFD1E42E043D24C9F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -4438,11 +4468,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		53DF481CEE74E5639A21FB9731E43336 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -5170,6 +5199,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4C7824F11391F94E6F107B1E497916F6 /* Build configuration list for PBXNativeTarget "Pods-Circle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E674716ECCC9E36F2333A9191C0E59AD /* Debug */,
+				0B114E3BB782B1C220843C938D5FA9F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		50C8E1EFA0C5DC6AD96DBEE0EFA14308 /* Build configuration list for PBXNativeTarget "Eureka" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -5197,11 +5235,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96A8357FB8BF5C39ACE142017049B4E0 /* Build configuration list for PBXNativeTarget "Result" */ = {
+		8C1E4CEFB2390CBE75E70BAC20F44BBF /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				28DCABE28A7DDEE8C55BD632C7BE458A /* Debug */,
-				CE241C6CD5DC9572BA40088A7B4A24A0 /* Release */,
+				576C583E88A92DC2279EB3BFC2CA8A6C /* Debug */,
+				E8652F35BF322A3957D0F62338910B79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00113D1E204DF13F004E5971 /* EvaluationProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00113D1D204DF13F004E5971 /* EvaluationProfileViewController.swift */; };
 		00EAC1532046F982009494A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EAC1522046F982009494A2 /* AppDelegate.swift */; };
 		00EAC1582046F982009494A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00EAC1562046F982009494A2 /* Main.storyboard */; };
 		00EAC15A2046F982009494A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00EAC1592046F982009494A2 /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 		730B7BAB204D82BC0062DE0C /* UserManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA6204D82BC0062DE0C /* UserManagerImpl.swift */; };
 		730B7BAC204D82BC0062DE0C /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA7204D82BC0062DE0C /* LocalUser.swift */; };
 		730B7BAD204D82BC0062DE0C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA8204D82BC0062DE0C /* UserManager.swift */; };
+		730B7BAF204DA1360062DE0C /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BAE204DA1360062DE0C /* UserSingleton.swift */; };
+		730B7BB3204DAE8D0062DE0C /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BB2204DAE8D0062DE0C /* TokenManager.swift */; };
 		73D11F5020471874009306EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F4F20471874009306EF /* LoginViewController.swift */; };
 		73D11F5320484A2F009306EF /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5220484A2F009306EF /* APIRouter.swift */; };
 		73D11F5520484B26009306EF /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5420484B26009306EF /* NetworkConstants.swift */; };
@@ -64,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00113D1D204DF13F004E5971 /* EvaluationProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationProfileViewController.swift; sourceTree = "<group>"; };
 		00EAC14F2046F982009494A2 /* Circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00EAC1522046F982009494A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00EAC1572046F982009494A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		730B7BA6204D82BC0062DE0C /* UserManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManagerImpl.swift; sourceTree = "<group>"; };
 		730B7BA7204D82BC0062DE0C /* LocalUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
 		730B7BA8204D82BC0062DE0C /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		730B7BAE204DA1360062DE0C /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
+		730B7BB2204DAE8D0062DE0C /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		73D11F4F20471874009306EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73D11F5220484A2F009306EF /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		73D11F5420484B26009306EF /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
@@ -207,6 +213,8 @@
 				730B7BA6204D82BC0062DE0C /* UserManagerImpl.swift */,
 				73D11F61204990B0009306EF /* TableViewCell */,
 				73D11F562048666F009306EF /* Network */,
+				730B7BAE204DA1360062DE0C /* UserSingleton.swift */,
+				730B7BB2204DAE8D0062DE0C /* TokenManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 				73D11F642049B323009306EF /* UserProfileViewController.swift */,
 				73D11F662049BD1A009306EF /* EvaluationViewController.swift */,
 				73D11FA42049D323009306EF /* EvaluationFormViewController.swift */,
+				00113D1D204DF13F004E5971 /* EvaluationProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -632,8 +641,11 @@
 				73D11F58204866EE009306EF /* AuthService.swift in Sources */,
 				73D11F672049BD1A009306EF /* EvaluationViewController.swift in Sources */,
 				73D11F5E2048A60D009306EF /* CompanyService.swift in Sources */,
+				730B7BAF204DA1360062DE0C /* UserSingleton.swift in Sources */,
 				73D11F692049BDE1009306EF /* FormTableViewCell.swift in Sources */,
+				730B7BB3204DAE8D0062DE0C /* TokenManager.swift in Sources */,
 				730B7BA9204D82BC0062DE0C /* PingboardUser.swift in Sources */,
+				00113D1E204DF13F004E5971 /* EvaluationProfileViewController.swift in Sources */,
 				00EAC1532046F982009494A2 /* AppDelegate.swift in Sources */,
 				D4DF09F12048364C00393DCC /* UserListViewController.swift in Sources */,
 				73D11FA52049D323009306EF /* EvaluationFormViewController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import RxSwift
 
 
 class User: Decodable {
@@ -20,6 +20,8 @@ class User: Decodable {
     var job_title: String?
     var icon: String?
     var medium: String?
+    var pictureUrl:String?
+    
     
     init(response: Any){
         let decoder = JSONDecoder()
@@ -41,4 +43,27 @@ class User: Decodable {
         icon = "frizzo.com"
         medium = "frizzo.org"
     }
+    
+    
+    
+    
+    init(dictionary: Dictionary<String,Any>){
+        
+        self.id = dictionary["id"] as? String
+        self.first_name = dictionary["first_name"] as? String
+        self.last_name = dictionary["last_name"] as? String
+        self.email = dictionary["email"] as? String
+        self.team = dictionary["team"] as? String
+        self.job_title = dictionary["job_title"] as? String
+        self.icon = dictionary["icon"] as? String
+        self.medium = dictionary["medium"] as? String
+        if let pictureUrlDictionary = dictionary["avatar_urls"] as? Dictionary<String,Any> {
+            self.pictureUrl = pictureUrlDictionary["medium"] as? String
+        }
+     
+        
+        
+    }
+ 
+
 }

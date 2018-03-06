@@ -20,6 +20,7 @@ target 'Circle' do
   
   pod 'Eureka'
   pod 'RxEureka'
+  pod 'Kingfisher'
   target 'CircleTests' do
     inherit! :search_paths
     # Pods for testing

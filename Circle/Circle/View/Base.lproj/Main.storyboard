@@ -31,13 +31,13 @@
                                 <color key="textColor" red="0.13725490196078433" green="0.59215686274509804" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-NW-8Jf">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="leonardo.piovezan@ebanx.com" borderStyle="roundedRect" placeholder="usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-NW-8Jf">
                                 <rect key="frame" x="78" y="255" width="219" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="username"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSu-vd-SQM">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="senbonzakura1960" borderStyle="roundedRect" placeholder="senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSu-vd-SQM">
                                 <rect key="frame" x="78" y="325" width="219" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -387,10 +387,10 @@
             </objects>
             <point key="canvasLocation" x="3417" y="266"/>
         </scene>
-        <!--View Controller-->
+        <!--Evaluation Profile View Controller-->
         <scene sceneID="tmi-5F-Ld7">
             <objects>
-                <viewController id="Lsa-US-kfp" sceneMemberID="viewController">
+                <viewController id="Lsa-US-kfp" customClass="EvaluationProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D7t-cQ-Te0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -456,10 +456,18 @@
                         <viewLayoutGuide key="safeArea" id="EbZ-iC-Smh"/>
                     </view>
                     <navigationItem key="navigationItem" id="6A8-UX-XfX"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="ccS-0f-hmq" id="OzM-0I-r2B"/>
+                        <outlet property="evaluateButton" destination="mkP-mX-7EY" id="Kf4-uR-Fb6"/>
+                        <outlet property="positionLabel" destination="ZAw-BV-BoP" id="uCv-bU-o1G"/>
+                        <outlet property="profileImageView" destination="1Bn-lQ-imY" id="xeV-Qz-j6b"/>
+                        <outlet property="profileNameLabel" destination="nrW-Jd-6uH" id="h5j-D1-cTa"/>
+                        <outlet property="teamLabel" destination="WJ7-fl-DDb" id="97v-GH-WO0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1q-5S-4qC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2009" y="-431"/>
+            <point key="canvasLocation" x="2098" y="-431"/>
         </scene>
     </scenes>
 </document>

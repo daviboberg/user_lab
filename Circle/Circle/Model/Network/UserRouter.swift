@@ -20,8 +20,8 @@ extension UserRouter:TargetType {
     
     var path: String {
         switch self {
-        case .getUser:
-            return "/users?"
+        case .getUser(_, let id):
+            return "/users/\(id)"
         }
     }
     
@@ -34,7 +34,13 @@ extension UserRouter:TargetType {
     }
     
     var task: Task {
-        return .requestPlain
+        
+//        return .requestPlain
+//        if let parameters = self.parameters {
+//            return .requestParameters(parameters: parameters, encoding: parameterEncoding)
+//        } else {
+            return .requestPlain
+       // }
     }
     
     var headers: [String : String]? {
@@ -46,8 +52,9 @@ extension UserRouter:TargetType {
     
     var parameters: [String : Any]? {
         switch self {
-        case .getUser(let id):
-            return ["id":id]
+        case .getUser(_,let id):
+           // return ["id":id]
+            return nil
         }
     }
     

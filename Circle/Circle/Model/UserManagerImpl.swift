@@ -29,7 +29,7 @@ class UserManagerImpl : UserManager{
         defaults.set(user.medium, forKey: "medium")
     }
     
-    func getUser() -> LocalUser{
+    func loadUser() -> LocalUser{
         
         let defaults = UserDefaults.standard
         let user = LocalUser()
