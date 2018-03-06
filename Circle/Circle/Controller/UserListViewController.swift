@@ -30,6 +30,8 @@ class UserListViewController: UIViewController {
         
         setUpBinding()
         getAllUser()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,13 +41,15 @@ class UserListViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let user = sender as? User
-        
-        
-        
-        
-        
+        if segue.identifier == "profile"{
+            guard let user = sender as? User else {
+                return
+            }
+
+            let evaluationProfileController = segue.destination as? EvaluationProfileViewController
+            evaluationProfileController?.user = Variable(user)
+        }
+  
     }
     
     func getAllUser(){
@@ -81,7 +85,8 @@ class UserListViewController: UIViewController {
 }
 
 
-extension UserListViewController{
+extension UserListViewController:UITableViewDelegate{
+    
     func setUpBinding(){
         bindTableView()
         bindTableViewSelectedCell()
@@ -106,14 +111,20 @@ extension UserListViewController{
         userListTableView
             .rx
             .itemSelected
-            
             .subscribe{result in
                 guard let event = result.element else {
                     return
                 }
-                let user = self.userList[event.row]
-                self.performSegue(withIdentifier: "", sender: user)
+                
+                let userArray = self.userListObservable.value
+                let user = userArray[event.row]
+                self.performSegue(withIdentifier: "profile", sender: user)
                 
             }.disposed(by: disposableBag)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 }
+

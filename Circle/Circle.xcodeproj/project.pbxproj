@@ -23,6 +23,7 @@
 		730B7BAD204D82BC0062DE0C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BA8204D82BC0062DE0C /* UserManager.swift */; };
 		730B7BAF204DA1360062DE0C /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BAE204DA1360062DE0C /* UserSingleton.swift */; };
 		730B7BB3204DAE8D0062DE0C /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B7BB2204DAE8D0062DE0C /* TokenManager.swift */; };
+		730CA465204F025E00D5C5C0 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730CA464204F025E00D5C5C0 /* RoundedImageView.swift */; };
 		73D11F5020471874009306EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F4F20471874009306EF /* LoginViewController.swift */; };
 		73D11F5320484A2F009306EF /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5220484A2F009306EF /* APIRouter.swift */; };
 		73D11F5520484B26009306EF /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D11F5420484B26009306EF /* NetworkConstants.swift */; };
@@ -88,6 +89,7 @@
 		730B7BA8204D82BC0062DE0C /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		730B7BAE204DA1360062DE0C /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
 		730B7BB2204DAE8D0062DE0C /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		730CA464204F025E00D5C5C0 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		73D11F4F20471874009306EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73D11F5220484A2F009306EF /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		73D11F5420484B26009306EF /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				73D11F562048666F009306EF /* Network */,
 				730B7BAE204DA1360062DE0C /* UserSingleton.swift */,
 				730B7BB2204DAE8D0062DE0C /* TokenManager.swift */,
+				730CA464204F025E00D5C5C0 /* RoundedImageView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				D493CD13204D6CE4008E854D /* UserService.swift in Sources */,
 				D493CD112049DD2F008E854D /* UserRouter.swift in Sources */,
 				730B7BAB204D82BC0062DE0C /* UserManagerImpl.swift in Sources */,
+				730CA465204F025E00D5C5C0 /* RoundedImageView.swift in Sources */,
 				73D11F5A204868C8009306EF /* AuthServiceImpl.swift in Sources */,
 				D493CD0D20499CBC008E854D /* UsersCollectServiceImpl.swift in Sources */,
 				730B7BAA204D82BC0062DE0C /* User.swift in Sources */,
