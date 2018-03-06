@@ -38,12 +38,21 @@ class UserListViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let user = sender as? User
+        
+        
+        
+        
+        
+    }
+    
     func getAllUser(){
         
         let provider = MoyaProvider<UsersCollectRouter>(plugins: [NetworkLoggerPlugin()])
         
         let userCollectService = UsersCollectServiceImpl(provider: provider)
-        
         
         guard let token = UserSingleton.instance.tokenManager?.accessToken else {
             //TODO: COlocar um aviso pro usuario caso nao funcione
@@ -73,10 +82,9 @@ class UserListViewController: UIViewController {
 
 
 extension UserListViewController{
-    
-    
     func setUpBinding(){
         bindTableView()
+        bindTableViewSelectedCell()
     }
     
     func bindTableView(){
@@ -90,6 +98,22 @@ extension UserListViewController{
                 cell.userTeamLabel.text = element.team
                 cell.userImageView.kf.setImage(with: URL(string: element.pictureUrl!))
 
+            }.disposed(by: disposableBag)
+    }
+    
+    func bindTableViewSelectedCell(){
+        
+        userListTableView
+            .rx
+            .itemSelected
+            
+            .subscribe{result in
+                guard let event = result.element else {
+                    return
+                }
+                let user = self.userList[event.row]
+                self.performSegue(withIdentifier: "", sender: user)
+                
             }.disposed(by: disposableBag)
     }
 }
