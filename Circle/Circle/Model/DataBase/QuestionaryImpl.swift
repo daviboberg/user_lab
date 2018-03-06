@@ -13,14 +13,15 @@ import FirebaseDatabase
 
 class QuestionaryImpl : Questionary {
     
-    var ref = Database.database().reference()
+    var databaseReference:DatabaseReference!
     func connect() {
         FirebaseApp.configure()
+        databaseReference = Database.database().reference()
     }
     
     func loadQuestionary() {
         
-        ref.child("Questions").observeSingleEvent(of: .value, with: { (snapshot) in
+        databaseReference.child("Questions").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let question = value?["key"] as? String ?? ""
 
@@ -37,8 +38,8 @@ class QuestionaryImpl : Questionary {
     }
     
     func saveAnswers(){
-        ref = Database.database().reference()
+        databaseReference = Database.database().reference()
         // Exemple of saving to database
-        self.ref.child("Answers").setValue(["key":"[1, 2]]"])
+        self.databaseReference.child("Answers").setValue(["key":"[1, 2]]"])
     }
 }
