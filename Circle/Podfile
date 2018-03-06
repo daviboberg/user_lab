@@ -13,6 +13,11 @@ target 'Circle' do
   pod 'Alamofire'
   pod 'Moya-ModelMapper/RxSwift'
   
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  
+  pod 'ObjectMapper'
+  
   pod 'Eureka'
   pod 'RxEureka'
   target 'CircleTests' do
