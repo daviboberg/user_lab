@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class UserProfileViewController: UIViewController {
 
@@ -33,7 +34,8 @@ class UserProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let url = URL(string: "https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/63466810.png?x-amz-meta-iv=1&x-amz-meta-ck=a8e3a82a26df2cf32d8835e7abe302eb&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1522540800&Signature=Ren9JkYRf1F0FfIN%2FyhRI5YEyUM%3D")
+        profileImageView.kf.setImage(with: url)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,19 +48,15 @@ class UserProfileViewController: UIViewController {
 
 extension UserProfileViewController{
     
-    
     func setUpBindings(){
-        
         setUpButton()
-        
-        
-       
     }
     
     
     func setUpLabels(){
         
     }
+    
     func setUpButton(){
         logoutButton.rx.tap.bind{
             
