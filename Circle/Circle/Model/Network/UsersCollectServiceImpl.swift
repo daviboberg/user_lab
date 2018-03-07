@@ -23,5 +23,12 @@ class UsersCollectServiceImpl:UsersCollectService {
 //            .filter(statusCode: 200)
     }
     
+    /* parameter hardcoded --test
+    func getUsersCollect(token: String) -> PrimitiveSequence<SingleTrait, Response> {
+        return provider.rx.request(.getUsersCollect(token:token, pageSize: 300))
+//            .filter(statusCode: 200)
+    }
+    */
+    
 
 }
